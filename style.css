@@ -1,0 +1,129 @@
+/* Base styles */
+:root {
+    /* Color variables for easy tweaking */
+    --bg-dark: #1a1a1d;
+    --bg-lighter: #22222f;
+    --text-primary: #e0e0e0;
+    --accent-blue: #8a8aff;
+    --border-color: #4a4a8a;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.tw-story {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom, var(--bg-lighter), var(--bg-dark));
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.1);
+}
+
+.tw-passage {
+    padding: 1rem;
+    animation: fadeIn 1s forwards;
+}
+
+.tw-passage h1, .tw-passage h2, .tw-passage h3 {
+    color: var(--accent-blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(138, 138, 255, 0.3);
+}
+
+.tw-link, .tw-link:link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tw-link:hover {
+    color: #c0c0ff;
+    text-shadow: 0 0 5px rgba(138, 138, 255, 0.5);
+}
+
+.tw-link {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(to right, var(--bg-lighter), var(--bg-dark));
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.tw-link:hover {
+    background: linear-gradient(to right, #3a3a4a, var(--bg-lighter));
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(138, 138, 255, 0.2);
+}
+
+blockquote {
+    font-style: italic;
+    color: #b0b0cc;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-left: 2px dotted var(--border-color);
+    background: rgba(74, 74, 138, 0.1);
+}
+
+strong {
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+em {
+    color: #b0b0cc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#ui-bar {
+    background: var(--bg-lighter);
+    border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .tw-story {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .tw-passage {
+        padding: 0.5rem;
+    }
+    
+    .tw-link {
+        margin: 0.5rem 0;
+        padding: 0.6rem 1rem;
+    }
+}
+
+#ui-bar {
+    background: var(--bg-lighter);
+    border-right: 1px solid var(--border-color);
+}
+
+#ui-bar-toggle {
+    color: var(--accent-blue);
+    border: 1px solid var(--border-color);
+}
+
+#menu-core {
+    background: var(--bg-lighter);
+    border: 1px solid var(--border-color);
+}
+
+.menu-item {
+    color: var(--text-primary);
+}
